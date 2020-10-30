@@ -19,7 +19,7 @@ class LeaderHeaderTile extends StatelessWidget {
       title: EditTile(
           editText: 'All Time Edits',
           primaryColor: 0xffdf4f65,
-          secondaryColor: 0xffcbd6fc),
+          secondaryColor: 0xfffcbd6f),
       subtitle: EditTile(
         editText: 'Edits This Week',
         primaryColor: 0xff2fd9ad,
