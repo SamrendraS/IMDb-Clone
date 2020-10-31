@@ -11,15 +11,20 @@ class FooterBoardTile extends StatelessWidget {
       height: 100,
       color: Color(0xff032541),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Image(
-            image: AssetImage(''),
+            image: AssetImage('assets/logo.png'),
           ),
-          SocialIconWidget(iconVal: FontAwesomeIcons.github),
-          SocialIconWidget(iconVal: FontAwesomeIcons.github),
-          SocialIconWidget(iconVal: FontAwesomeIcons.github),
-          SocialIconWidget(iconVal: FontAwesomeIcons.github),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SocialIconWidget(iconVal: FontAwesomeIcons.github),
+              SocialIconWidget(iconVal: FontAwesomeIcons.twitter),
+              SocialIconWidget(iconVal: FontAwesomeIcons.linkedin),
+              SocialIconWidget(iconVal: FontAwesomeIcons.instagram),
+            ],
+          ),
         ],
       ),
     );
