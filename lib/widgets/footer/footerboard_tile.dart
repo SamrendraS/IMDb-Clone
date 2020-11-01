@@ -14,7 +14,7 @@ class FooterBoardTile extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Image(
-            image: AssetImage('assets/logo.png'),
+            image: AssetImage('assets/logoFull.jpg'),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,

@@ -1,3 +1,5 @@
+import 'package:faker/faker.dart';
+
 class Ratings {
   double totalEditPercentage;
   double weeklyEditPercentage;
@@ -17,8 +19,10 @@ class Ratings {
       this.leaderImage);
 }
 
+// var faker = new Faker();
+
 final List<Ratings> ratings = [
-  Ratings(0.9, 0.8, "273,434", "7,326", "Sam",
+  Ratings(0.9, 0.8, "273,434", "7,326", faker.person.name(),
       "https://images.unsplash.com/photo-1557296387-5358ad7997bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=694&q=80"),
   Ratings(0.9, 0.6, "1,540,501", "5,091", "Banana",
       "https://images.unsplash.com/photo-1568967729548-e3dbad3d37e0?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"),

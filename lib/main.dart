@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'screens/home_screen.dart';
+import 'package:fmdb/theme.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,12 +11,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'The Movie Database(TMDB)',
+      title: 'Flutter Movie Database(FMDB)',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primaryColor: Color(0xff032541),
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
+      theme: theme,
       home: HomeScreen(),
     );
   }
