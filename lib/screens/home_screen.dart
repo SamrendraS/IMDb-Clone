@@ -16,14 +16,17 @@ class HomeScreen extends StatelessWidget {
         title: CustomAppbar(),
       ),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            TopBannerSearchCard(),
-            TrendingSection(),
-            TrailerSection(),
-            LeaderBoardTile(),
-            FooterBoardTile(),
-          ],
+        child: Container(
+          color: Colors.grey[100],
+          child: Column(
+            children: [
+              TopBannerSearchCard(),
+              TrendingSection(),
+              TrailerSection(),
+              LeaderBoardTile(),
+              FooterBoardTile(),
+            ],
+          ),
         ),
       ),
     );

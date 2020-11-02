@@ -3,7 +3,7 @@ import 'package:fmdb/widgets/trailer/trailer_content.dart';
 
 class TrailerSection extends StatelessWidget {
   final String trailerBg =
-      "https://www.wallpapertip.com/wmimgs/42-428352_movie-poster-coming-soon.jpg";
+      "https://images.unsplash.com/photo-1568191009535-7d8b407d389a?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80";
 
   @override
   Widget build(BuildContext context) {

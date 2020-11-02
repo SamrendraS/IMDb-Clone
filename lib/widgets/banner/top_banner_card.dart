@@ -1,36 +1,39 @@
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:velocity_x/velocity_x.dart';
+import 'package:fmdb/screens/detail_screen.dart';
 import 'package:flutter/material.dart';
+
+class TopBannerSearchCard extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // print(context.isMobile);
+    return Stack(
+      children: [
+        TopBannerBackground(),
+        Container(
+          height: context.isMobile ? 220 : 400,
+          alignment: Alignment.bottomCenter,
+          color: Colors.blueGrey.shade900.withOpacity(0.5),
+          child: Center(child: BannerText()),
+        ),
+      ],
+    );
+  }
+}
 
 class TopBannerBackground extends StatelessWidget {
   final String trailerBg =
       'https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80';
   @override
   Widget build(BuildContext context) {
-    return ColorFiltered(
-      colorFilter:
-          new ColorFilter.mode(Colors.blue.withOpacity(0.4), BlendMode.color),
-      child: Image.network(
-        trailerBg,
-        width: MediaQuery.of(context).size.width,
-        height: 400,
+    return AnimatedContainer(
+      duration: const Duration(seconds: 1),
+      child: CachedNetworkImage(
+        imageUrl: trailerBg,
+        width: context.screenWidth,
+        height: context.isMobile ? 220 : 400,
         fit: BoxFit.cover,
       ),
-    );
-  }
-}
-
-class TopBannerSearchCard extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        TopBannerBackground(),
-        Container(
-          height: 400,
-          alignment: Alignment.bottomCenter,
-          color: Colors.blueGrey.shade900.withOpacity(0.5),
-          child: Center(child: BannerText()),
-        ),
-      ],
     );
   }
 }
@@ -83,6 +86,7 @@ class BannerText extends StatelessWidget {
               contentPadding: EdgeInsets.all(16),
               fillColor: Colors.white,
             ),
+            textInputAction: TextInputAction.search,
           ),
         ],
       ),

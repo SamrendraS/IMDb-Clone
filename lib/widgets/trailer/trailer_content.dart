@@ -14,7 +14,7 @@ class TrailerContent extends StatelessWidget {
             style: TextStyle(
               fontSize: 24.0,
               color: Colors.white,
-              fontWeight: FontWeight.w500,
+              fontWeight: FontWeight.w400,
             ),
           ),
           SizedBox(
